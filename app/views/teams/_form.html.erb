@@ -17,6 +17,8 @@
     <div v-else>
       <label>Player Name</label>
       <input type="text" v-model="player.name" />
+      <input type="text" v-model="player.position" />
+      <input type="text" v-model="player.number" />
       <button v-on:click="removePlayer(index)">Remove</button>
     </div>
 

@@ -5,14 +5,6 @@
 // like app/views/layouts/application.html.erb.
 // All it does is render <div>Hello Vue</div> at the bottom of the page.
 
-//import Vue from 'vue'
-// import App from '../app.vue'
-// import TurbolinksAdapter from 'vue-turbolinks'
-// import VueResource from 'vue-resource'
-
-
-
-
 import Vue from 'vue/dist/vue.esm';
 import TurbolinksAdapter from 'vue-turbolinks';
 import VueResource from 'vue-resource';
@@ -26,11 +18,11 @@ document.addEventListener('turbolinks:load', () => {
   var element = document.getElementById("team-form")
   if (element != null) {
 
-    var id = element.dataset.id
-    var team = JSON.parse(element.dataset.team)
-    var players_attributes = JSON.parse(element.dataset.playersAttributes)
-    players_attributes.forEach(function(player) { player._destroy = null })
-    team.players_attributes = players_attributes
+    var id = element.dataset.id;
+    var team = JSON.parse(element.dataset.team);
+    var players_attributes = JSON.parse(element.dataset.playersAttributes);
+    players_attributes.forEach(function(player) { player._destroy = null });
+    team.players_attributes = players_attributes;
 
     var app = new Vue({
       el: element,
@@ -43,6 +35,7 @@ document.addEventListener('turbolinks:load', () => {
             id: null,
             name: "",
             position: "",
+            number: "",
             _destroy: null
           })
         },

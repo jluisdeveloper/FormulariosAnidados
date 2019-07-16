@@ -7,7 +7,7 @@
 
 <h4>Players</h4>
 <% @team.players.each do |player| %>
-  <div><%= player.name %></div>
+  <div><%= player.name %> <%= player.position %> <%= player.number %></div>
 <% end %>
 
 <hr />
